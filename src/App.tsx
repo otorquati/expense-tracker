@@ -44,6 +44,13 @@ const App = () => {
   const handleMonthChange = (newMonth:string) => {
     setCurrentMonth(newMonth);
   }
+
+  const handleAddItem = (item: Item) => {
+    let newList = [...list];
+    newList.push(item);
+    setList(newList);
+  }
+  
   return (
     <C.Container>
       <C.Header>
@@ -58,7 +65,7 @@ const App = () => {
               expense={expense}
               />
             { /* Área de Inserção */}
-            <InputArea />
+            <InputArea onAdd={handleAddItem} />
 
             { /* Tabela de Itens */}
               <TableArea list={filteredList} />
