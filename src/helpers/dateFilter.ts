@@ -27,9 +27,9 @@ return `${addZeroToDate(day)}/${addZeroToDate(month)}/${year}`;
 
 const addZeroToDate = (n: number): string => n < 10 ? `0${n}` : `${n}`;
 
-export const formatCurrentMonth = (CurrentMonth: string): string => {
+export const formatCurrentMonth = (currentMonth: string): string => {
   let [ year, month] = currentMonth.split('-');
-  let Months = [
+  let months = [
     'Janeiro',
     'Fevereiro',
     'Março',
@@ -42,5 +42,5 @@ export const formatCurrentMonth = (CurrentMonth: string): string => {
     'Outubro',
     'Novembro',
     'Dezembro' ]
-    return `${month[parseInt(month)-1]}/${year}`;
+    return `${months[parseInt(month)-1]}/${year}`;
 }
