@@ -1,4 +1,6 @@
 import * as C from './styles';
+import UInumbers from '../../components/UInumbers';
+
 type Props = {
   title: string;
   value: number;
@@ -9,7 +11,9 @@ export const ResumeItem = ({ title, value, color}: Props) => {
   return(
     <C.Container>
       <C.Title>{title}</C.Title>
-      <C.Info color={color}>R$ {value}</C.Info>
+      <C.Info >
+        <UInumbers format='0.00' children={value} color={color}/>
+      </C.Info>
     </C.Container>
   );
 }

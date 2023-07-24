@@ -14,6 +14,6 @@ export const Category = styled.div<{ color: String }>`
   background-color: ${props => props.color};
 `;
 
-export const Value = styled.div<{ color: String }>`
-  color: ${props => props.color};
+export const Value = styled.div`
+  text-align: right;
 `;

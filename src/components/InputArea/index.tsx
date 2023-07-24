@@ -17,10 +17,10 @@ export const InputArea =({onAdd}: Props) => {
   const [valueField, setValueField] = useState(0);
  
   // definir as chaves de indexação das categorias
-    let categoryKeys: string[] = Object.keys(categories);
+    const categoryKeys: string[] = Object.keys(categories);
 
     const handleAddEvent = () => {
-      let errors: string[] = [];
+      const errors: string[] = [];
   
       if(isNaN(new Date(dateField).getTime())) {
         errors.push('Data inválida!');
